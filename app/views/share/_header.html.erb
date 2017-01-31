@@ -1,0 +1,161 @@
+<div class="site-header clearfix" id="js-site-header__fixed">
+  <p class="fl"><%=link_to "スペースマーケット", root_path, class: "site-header__logo" %></p>
+  <div data-react-class="SMHeaderNavi" data-react-props="{&quot;currentUser&quot;:null}">
+    <ul class="site-header__nav sm-hide" data-react-checksum="946278143" data-reactid="1" data-reactroot="">
+      <li data-reactid="2">
+        <a class="site-header__nav-owner button-green" data-reactid="3" href="/about/why_owner">スペースを掲載する</a>
+      </li>
+    <% if user_signed_in? %>
+      <li data-reactid="4">
+        <a class="site-header__nav-message" data-reactid="5" href="#"><i class="fa fa-envelope" data-reactid="6"></i></a>
+        <div class="baloon baloon-top site-header__nav-baloon site-header__nav-baloon-message" data-reactid="7" style="display:none;">
+          <div class="baloon-inner" data-reactid="8">
+            <p class="site-header__nav-baloon-nodata" data-reactid="9">通知はありません</p>
+          </div>
+        </div>
+      </li>
+      <li data-reactid="10">
+        <a class="site-header__nav-user" data-reactid="11" href="/dashboard"><img class="site-header__nav-user-icon" data-reactid="12" src="https://d1nc9n01ephlj6.cloudfront.net/uploads/users/60091/square_a20d704e2332d6eac82091a524109843.jpg">
+          <p class="site-header__nav-user-name link-black link-borderless" data-reactid="13">
+            <span class="site-header__nav-user-name__full" data-reactid="14"><% curent_user.name %></span><i class="fa fa-caret-down ml5" data-reactid="15"></i>
+          </p>
+        </a>
+        <div class="baloon baloon-top site-header__nav-baloon site-header__nav-baloon-name" data-reactid="16" style="display:none;">
+          <div class="baloon-inner" data-reactid="17">
+            <ul data-reactid="18">
+              <li class="site-header__nav-baloon-menu" data-reactid="19">
+                <a data-reactid="20" href="/dashboard">ダッシュボード</a>
+              </li>
+              <li class="site-header__nav-baloon-menu" data-reactid="21">
+                <a data-reactid="22" href="/dashboard/favorites">お気に入り</a>
+              </li>
+              <li class="site-header__nav-baloon-menu" data-reactid="23">
+                <a data-reactid="24" href="/dashboard/reservations">予約管理</a>
+              </li>
+              <li class="site-header__nav-baloon-menu" data-reactid="25">
+                <a data-reactid="26" href="/dashboard/settings/account">設定</a>
+              </li>
+              <li class="site-header__nav-baloon-menu" data-reactid="27">
+                <%= link_to "ログアウト", destroy_user_session_path%>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    <% else %>
+      <li data-reactid="4">
+        <!-- <a class="site-header__nav-user" data-reactid="5" href="https://spacemarket.com/i/sign_up">
+        <p class="site-header__nav-user-name link-black" data-reactid="6">新規登録</p></a> -->
+        <%= link_to new_user_registration_path, method: :get, {class: "site-header__nav-user"} do %>
+        <p class="site-header__nav-user-name link-black" data-reactid="6">新規登録</p>
+      </li>
+      <li data-reactid="7">
+        <!-- <a class="site-header__nav-user" data-reactid="8" href="https://spacemarket.com/i/login">
+        <p class="site-header__nav-user-name link-black" data-reactid="9">ログイン</p></a> -->
+        <%= link_to new_user_session_path, method: :get, {class: "site-header__nav-user"} do %>
+        <p class="site-header__nav-user-name link-black" data-reactid="9">ログイン</p>
+      </li>
+    <% end %>
+      <li data-reactid="29">
+        <a class="site-header__nav-help link-black link-borderless" data-reactid="30" href="https://help.spacemarket.com/hc" target="_blank"><i class="fa fa-question" data-reactid="31"></i><span class="help__text" data-reactid="32">ヘルプ</span></a>
+      </li>
+    </ul>
+  </div>
+  <div data-react-class="SMMobileDrawer" data-react-props="{&quot;currentUser&quot;:null}">
+    <div class="site-header__smp" data-react-checksum="-1264810585" data-reactid="1" data-reactroot="">
+      <div data-reactid="2">
+        <input class="site-header__drawer-check" data-reactid="3" id="site-header__drawer" type="checkbox" value="on">
+        <label class="site-header__drawer-menu-btn" data-reactid="4" for="site-header__drawer">
+          <i class="fa fa-bars" data-reactid="5"></i>
+        </label>
+        <label class="site-header__drawer-close-menu" data-reactid="6" for="site-header__drawer"></label>
+        <nav class="site-header__drawer-menu js-scroller__overflow" data-reactid="7">
+          <ul data-reactid="8">
+            <li data-reactid="9">
+              <div class="site-header__drawer-name-box" data-reactid="10">
+                <img alt="ゲスト" class="site-header__drawer-user-icon" data-reactid="11" src="">
+                <p class="site-header__drawer-name-title" data-reactid="12">ゲスト</p>
+                <p class="site-header__drawer-user-name" data-reactid="13">ログインしていません</p>
+              </div>
+              <ul data-reactid="14">
+                <li class="site-header__drawer-menu-list" data-reactid="15">
+                  <a data-reactid="16" href="https://spacemarket.com/search"><i class="fa fa-search" data-reactid="17"></i><!-- react-text: 18 -->スペースを検索<!-- /react-text --></a>
+                </li>
+                <li class="site-header__drawer-menu-list" data-reactid="19">
+                  <a data-reactid="20" href="https://help.spacemarket.com/hc"><i class="fa fa-question" data-reactid="21"></i><!-- react-text: 22 -->ヘルプ<!-- /react-text --></a>
+                </li>
+                <li class="site-header__drawer-menu-list" data-reactid="23">
+                  <a data-reactid="24" href="https://spacemarket.com/i/login"><i class="fa fa-sign-in" data-reactid="25"></i><!-- react-text: 26 -->ログイン<!-- /react-text --></a>
+                </li>
+                <li class="site-header__drawer-menu-list" data-reactid="27">
+                  <a data-reactid="28" href="https://spacemarket.com/i/sign_up"><i class="fa fa-user" data-reactid="29"></i><!-- react-text: 30 -->新規登録<!-- /react-text --></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div data-react-class="SMMobileHeaderSearch" data-react-props="{&quot;location&quot;:null,&quot;keyword&quot;:null,&quot;geocode&quot;:null,&quot;priceType&quot;:null,&quot;eventType&quot;:null,&quot;spaceType&quot;:null,&quot;capacity&quot;:null,&quot;sort&quot;:null,&quot;minPrice&quot;:null,&quot;maxPrice&quot;:null,&quot;startedAt&quot;:null,&quot;endedAt&quot;:null,&quot;stayCheckinAt&quot;:null,&quot;stayCheckoutAt&quot;:null,&quot;amenities&quot;:null,&quot;eventTypeList&quot;:[{&quot;id&quot;:9,&quot;name&quot;:&quot;party&quot;,&quot;name_text&quot;:&quot;パーティー&quot;},{&quot;id&quot;:3,&quot;name&quot;:&quot;class&quot;,&quot;name_text&quot;:&quot;会議・研修&quot;},{&quot;id&quot;:7,&quot;name&quot;:&quot;photo_shoot&quot;,&quot;name_text&quot;:&quot;写真撮影&quot;},{&quot;id&quot;:8,&quot;name&quot;:&quot;film_shoot&quot;,&quot;name_text&quot;:&quot;ロケ撮影&quot;},{&quot;id&quot;:11,&quot;name&quot;:&quot;performance&quot;,&quot;name_text&quot;:&quot;演奏・パフォーマンス&quot;},{&quot;id&quot;:10,&quot;name&quot;:&quot;studio&quot;,&quot;name_text&quot;:&quot;個展・展示会&quot;},{&quot;id&quot;:6,&quot;name&quot;:&quot;sports&quot;,&quot;name_text&quot;:&quot;スポーツ・フィットネス&quot;},{&quot;id&quot;:5,&quot;name&quot;:&quot;office&quot;,&quot;name_text&quot;:&quot;オフィス&quot;},{&quot;id&quot;:4,&quot;name&quot;:&quot;wedding&quot;,&quot;name_text&quot;:&quot;結婚式&quot;},{&quot;id&quot;:2,&quot;name&quot;:&quot;event&quot;,&quot;name_text&quot;:&quot;イベント&quot;},{&quot;id&quot;:12,&quot;name&quot;:&quot;other&quot;,&quot;name_text&quot;:&quot;その他&quot;}],&quot;spaceTypeList&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;event_space&quot;,&quot;name_text&quot;:&quot;イベントスペース&quot;},{&quot;id&quot;:3,&quot;name&quot;:&quot;wedding&quot;,&quot;name_text&quot;:&quot;結婚式場&quot;},{&quot;id&quot;:18,&quot;name&quot;:&quot;office&quot;,&quot;name_text&quot;:&quot;オフィススペース&quot;},{&quot;id&quot;:4,&quot;name&quot;:&quot;hall&quot;,&quot;name_text&quot;:&quot;ホール&quot;},{&quot;id&quot;:5,&quot;name&quot;:&quot;meeting_space&quot;,&quot;name_text&quot;:&quot;貸し会議室&quot;},{&quot;id&quot;:6,&quot;name&quot;:&quot;studio&quot;,&quot;name_text&quot;:&quot;スタジオ&quot;},{&quot;id&quot;:7,&quot;name&quot;:&quot;cafe&quot;,&quot;name_text&quot;:&quot;カフェ&quot;},{&quot;id&quot;:8,&quot;name&quot;:&quot;restaurant&quot;,&quot;name_text&quot;:&quot;レストラン&quot;},{&quot;id&quot;:9,&quot;name&quot;:&quot;theatre&quot;,&quot;name_text&quot;:&quot;映画館&quot;},{&quot;id&quot;:10,&quot;name&quot;:&quot;gallery&quot;,&quot;name_text&quot;:&quot;ギャラリー&quot;},{&quot;id&quot;:11,&quot;name&quot;:&quot;bar&quot;,&quot;name_text&quot;:&quot;バー&quot;},{&quot;id&quot;:12,&quot;name&quot;:&quot;sports_facilities&quot;,&quot;name_text&quot;:&quot;スポーツ施設&quot;},{&quot;id&quot;:13,&quot;name&quot;:&quot;hotel&quot;,&quot;name_text&quot;:&quot;ホテル&quot;},{&quot;id&quot;:14,&quot;name&quot;:&quot;residential&quot;,&quot;name_text&quot;:&quot;住宅&quot;},{&quot;id&quot;:15,&quot;name&quot;:&quot;warehouse&quot;,&quot;name_text&quot;:&quot;倉庫&quot;},{&quot;id&quot;:16,&quot;name&quot;:&quot;winaery&quot;,&quot;name_text&quot;:&quot;ワイナリー・蔵&quot;},{&quot;id&quot;:17,&quot;name&quot;:&quot;other&quot;,&quot;name_text&quot;:&quot;その他&quot;}],&quot;amenityList&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;tables&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;テーブル&quot;},{&quot;id&quot;:2,&quot;name&quot;:&quot;chairs&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;椅子&quot;},{&quot;id&quot;:3,&quot;name&quot;:&quot;projector&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;プロジェクター&quot;},{&quot;id&quot;:4,&quot;name&quot;:&quot;parking&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;駐車場&quot;},{&quot;id&quot;:5,&quot;name&quot;:&quot;wifi&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;WIFI&quot;},{&quot;id&quot;:6,&quot;name&quot;:&quot;whiteboard&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;ホワイトボード&quot;},{&quot;id&quot;:7,&quot;name&quot;:&quot;printer&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;プリンター&quot;},{&quot;id&quot;:8,&quot;name&quot;:&quot;kitchen_facilities&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;キッチン設備&quot;},{&quot;id&quot;:9,&quot;name&quot;:&quot;kitchen_equipment&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;調理機材&quot;},{&quot;id&quot;:10,&quot;name&quot;:&quot;tv&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;テレビ&quot;},{&quot;id&quot;:11,&quot;name&quot;:&quot;lockers&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;ロッカー&quot;},{&quot;id&quot;:12,&quot;name&quot;:&quot;catering_services&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;ケータリング&quot;},{&quot;id&quot;:13,&quot;name&quot;:&quot;bar&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;バー&quot;},{&quot;id&quot;:14,&quot;name&quot;:&quot;sound_system&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;音響設備&quot;},{&quot;id&quot;:15,&quot;name&quot;:&quot;mirrors&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;ミラー&quot;},{&quot;id&quot;:16,&quot;name&quot;:&quot;showers&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;シャワー&quot;},{&quot;id&quot;:17,&quot;name&quot;:&quot;changing_room&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;更衣室&quot;},{&quot;id&quot;:18,&quot;name&quot;:&quot;lighting_equipment&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;照明設備&quot;},{&quot;id&quot;:19,&quot;name&quot;:&quot;photography_equipment&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;写真撮影機材&quot;},{&quot;id&quot;:20,&quot;name&quot;:&quot;film_equipment&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;動画撮影機材&quot;},{&quot;id&quot;:21,&quot;name&quot;:&quot;public_transportation&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;公共交通機関&quot;},{&quot;id&quot;:22,&quot;name&quot;:&quot;toilet&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;トイレ&quot;},{&quot;id&quot;:23,&quot;name&quot;:&quot;refrigerator&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;冷蔵庫&quot;},{&quot;id&quot;:24,&quot;name&quot;:&quot;power_equipment&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;電源&quot;},{&quot;id&quot;:25,&quot;name&quot;:&quot;air_conditioner&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;冷暖房&quot;},{&quot;id&quot;:26,&quot;name&quot;:&quot;towel&quot;,&quot;amenity_type&quot;:2,&quot;name_text&quot;:&quot;タオル&quot;},{&quot;id&quot;:27,&quot;name&quot;:&quot;soap&quot;,&quot;amenity_type&quot;:2,&quot;name_text&quot;:&quot;石鹸&quot;},{&quot;id&quot;:28,&quot;name&quot;:&quot;toothbrush&quot;,&quot;amenity_type&quot;:2,&quot;name_text&quot;:&quot;歯ブラシ&quot;},{&quot;id&quot;:29,&quot;name&quot;:&quot;shampoo&quot;,&quot;amenity_type&quot;:2,&quot;name_text&quot;:&quot;シャンプー・リンス&quot;},{&quot;id&quot;:30,&quot;name&quot;:&quot;hairdryer&quot;,&quot;amenity_type&quot;:2,&quot;name_text&quot;:&quot;ドライヤー&quot;},{&quot;id&quot;:31,&quot;name&quot;:&quot;bathtub&quot;,&quot;amenity_type&quot;:2,&quot;name_text&quot;:&quot;バスタブ&quot;},{&quot;id&quot;:32,&quot;name&quot;:&quot;washing_machine&quot;,&quot;amenity_type&quot;:2,&quot;name_text&quot;:&quot;洗濯機&quot;},{&quot;id&quot;:33,&quot;name&quot;:&quot;dryer&quot;,&quot;amenity_type&quot;:2,&quot;name_text&quot;:&quot;乾燥機&quot;},{&quot;id&quot;:34,&quot;name&quot;:&quot;iron&quot;,&quot;amenity_type&quot;:2,&quot;name_text&quot;:&quot;アイロン&quot;},{&quot;id&quot;:35,&quot;name&quot;:&quot;restaurant&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;周辺に飲食店&quot;},{&quot;id&quot;:36,&quot;name&quot;:&quot;market&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;スーパー/コンビニ&quot;},{&quot;id&quot;:37,&quot;name&quot;:&quot;accessibility&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;バリアフリー&quot;},{&quot;id&quot;:38,&quot;name&quot;:&quot;drinking&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;飲酒可&quot;},{&quot;id&quot;:39,&quot;name&quot;:&quot;pet&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;ペット可&quot;},{&quot;id&quot;:40,&quot;name&quot;:&quot;child&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;子連れ可&quot;},{&quot;id&quot;:41,&quot;name&quot;:&quot;smoking&quot;,&quot;amenity_type&quot;:0,&quot;name_text&quot;:&quot;喫煙可&quot;}],&quot;capacityList&quot;:[{&quot;id&quot;:1,&quot;name&quot;:10,&quot;name_text&quot;:&quot;10人〜&quot;},{&quot;id&quot;:2,&quot;name&quot;:20,&quot;name_text&quot;:&quot;20人〜&quot;},{&quot;id&quot;:3,&quot;name&quot;:30,&quot;name_text&quot;:&quot;30人〜&quot;},{&quot;id&quot;:4,&quot;name&quot;:40,&quot;name_text&quot;:&quot;40人〜&quot;},{&quot;id&quot;:5,&quot;name&quot;:50,&quot;name_text&quot;:&quot;50人〜&quot;},{&quot;id&quot;:6,&quot;name&quot;:75,&quot;name_text&quot;:&quot;75人〜&quot;},{&quot;id&quot;:7,&quot;name&quot;:100,&quot;name_text&quot;:&quot;100人〜&quot;},{&quot;id&quot;:8,&quot;name&quot;:150,&quot;name_text&quot;:&quot;150人〜&quot;},{&quot;id&quot;:9,&quot;name&quot;:200,&quot;name_text&quot;:&quot;200人〜&quot;},{&quot;id&quot;:10,&quot;name&quot;:300,&quot;name_text&quot;:&quot;300人〜&quot;},{&quot;id&quot;:11,&quot;name&quot;:400,&quot;name_text&quot;:&quot;400人〜&quot;},{&quot;id&quot;:12,&quot;name&quot;:500,&quot;name_text&quot;:&quot;500人〜&quot;},{&quot;id&quot;:13,&quot;name&quot;:1000,&quot;name_text&quot;:&quot;1000人〜&quot;}]}">
+    <div class="site-header__search-sm pc-hide__sm-show" data-react-checksum="2112823008" data-reactid="1" data-reactroot="">
+      <div class="sm__site-header__search" data-reactid="2">
+        <div class="sm__site-header__search-bd" data-reactid="3">
+          <div class="site-header__search-input-wrapper" data-reactid="4">
+            <input class="site-header__search-input site-header__search-keyword" data-reactid="5" placeholder="何を？ どこで？ いつ？" readonly type="search" value=""><a class="js-mobile-header-search__tranparent" data-reactid="6" href="https://spacemarket.com/i/sign_up#"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-react-class="SMHeaderSearch" data-react-props="{&quot;eventType&quot;:null}">
+    <div class="site-header__search sm-hide" data-react-checksum="-1763849100" data-reactid="1" data-reactroot="">
+      <div class="site-header__search-menu sm-hide" data-reactid="2">
+        <ul data-reactid="3">
+          <li class="site-header__search-menu-item" data-reactid="4">
+            <a class="site-header__search-menu-button" data-reactid="5" href="https://spacemarket.com/search?event_type=party">パーティー</a>
+          </li>
+          <li class="site-header__search-menu-item" data-reactid="6">
+            <a class="site-header__search-menu-button" data-reactid="7" href="https://spacemarket.com/search?event_type=class">会議</a>
+          </li>
+          <li class="site-header__search-menu-item" data-reactid="8">
+            <a class="site-header__search-menu-button" data-reactid="9" href="https://spacemarket.com/search?event_type=stay">宿泊</a>
+          </li>
+          <li class="site-header__search-menu-item site-header__search-menu-item-others" data-reactid="10">
+            <a class="site-header__search-menu-button" data-reactid="11" href="https://spacemarket.com/event_types/other">その他</a><select class="w100pa js-select__transparent" data-reactid="12" name="others">
+              <option data-reactid="13" selected value="">
+              </option>
+              <option data-reactid="14" value="photo_shoot">
+                写真撮影
+              </option>
+              <option data-reactid="15" value="film_shoot">
+                ロケ撮影
+              </option>
+              <option data-reactid="16" value="studio">
+                個展・展示会
+              </option>
+              <option data-reactid="17" value="performance">
+                演奏・パフォーマンス
+              </option>
+              <option data-reactid="18" value="sports">
+                スポーツ・フィットネス
+              </option>
+              <option data-reactid="19" value="office">
+                オフィス
+              </option>
+              <option data-reactid="20" value="wedding">
+                結婚式
+              </option>
+              <option data-reactid="21" value="event">
+                イベント
+              </option>
+              <option data-reactid="22" value="other">
+                その他
+              </option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
