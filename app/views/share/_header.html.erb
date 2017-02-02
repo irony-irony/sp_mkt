@@ -36,7 +36,7 @@
                 <a data-reactid="26" href="/dashboard/settings/account">設定</a>
               </li>
               <li class="site-header__nav-baloon-menu" data-reactid="27">
-                <%= link_to "ログアウト", destroy_user_session_path%>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
               </li>
             </ul>
           </div>
@@ -46,14 +46,16 @@
       <li data-reactid="4">
         <!-- <a class="site-header__nav-user" data-reactid="5" href="https://spacemarket.com/i/sign_up">
         <p class="site-header__nav-user-name link-black" data-reactid="6">新規登録</p></a> -->
-        <%= link_to new_user_registration_path, method: :get, {class: "site-header__nav-user"} do %>
+        <%= link_to new_user_registration_path, {class: "site-header__nav-user"} do %>
         <p class="site-header__nav-user-name link-black" data-reactid="6">新規登録</p>
+        <% end %>
       </li>
       <li data-reactid="7">
         <!-- <a class="site-header__nav-user" data-reactid="8" href="https://spacemarket.com/i/login">
         <p class="site-header__nav-user-name link-black" data-reactid="9">ログイン</p></a> -->
-        <%= link_to new_user_session_path, method: :get, {class: "site-header__nav-user"} do %>
+        <%= link_to new_user_session_path, {class: "site-header__nav-user"} do %>
         <p class="site-header__nav-user-name link-black" data-reactid="9">ログイン</p>
+        <% end %>
       </li>
     <% end %>
       <li data-reactid="29">
@@ -88,7 +90,10 @@
                   <a data-reactid="24" href="https://spacemarket.com/i/login"><i class="fa fa-sign-in" data-reactid="25"></i><!-- react-text: 26 -->ログイン<!-- /react-text --></a>
                 </li>
                 <li class="site-header__drawer-menu-list" data-reactid="27">
-                  <a data-reactid="28" href="https://spacemarket.com/i/sign_up"><i class="fa fa-user" data-reactid="29"></i><!-- react-text: 30 -->新規登録<!-- /react-text --></a>
+                  <!-- <a data-reactid="28" href="https://spacemarket.com/i/sign_up"><i class="fa fa-user" data-reactid="29"></i>新規登録</a> -->
+                  <%= link_to new_user_registration_path do %>
+                  <i class="fa fa-user" data-reactid="29"></i><!-- react-text: 30 -->新規登録<!-- /react-text -->
+                  <% end %>
                 </li>
               </ul>
             </li>
