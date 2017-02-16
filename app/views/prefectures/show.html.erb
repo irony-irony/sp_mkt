@@ -1,0 +1,997 @@
+<body class="site-service body-categories-areas__show" style="position: relative; min-height: 100%; top: 0px;">
+  <header>
+    <div class="dashboard-container">
+      <div data-react-class="SMMustHeaderView" >
+      <%= render partial: 'share/campaign' %>
+      </div>
+      <%= render partial: 'share/header' %>
+    </div>
+  </header>
+  <div class="breadcrumbs link__subcolor sm-hide">
+    <ol itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <li>
+        <%= link_to root_path, {itemprop: "url" } do %>
+        <i class="ic_home">ホーム</i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to 'エリアから探す', prefectures_path, { class: "breadcrumbs-title", itemprop: "title"} %>
+      </li>
+      <li><span class="breadcrumbs-title" itemprop="title"><%= @prefecture.prefecture %></span>
+      </li>
+    </ol>
+  </div>
+  <div data-react-class="SMCategoryHomeView" >
+    <div class="site-main" data-react-checksum="197180849" data-reactid="1" data-reactroot="">
+      <div class="mod-heroimg" data-reactid="2">
+        <img alt="" class="mod-heroimg__img" data-reactid="3" src="./area_kyoto_files/tbkchrzchpd1udrcailh.jpg">
+        <div class="mod-heroimg__bg" data-reactid="4">
+          <h1 class="mod-heroimg__title" data-reactid="5"><!-- react-text: 6 --><%= @prefecture.prefecture %> のレンタルスペース<!-- /react-text --><span class="catetop-heroimg__review" data-reactid="7">
+          <a data-reactid="8" href="https://spacemarket.com/users/A7caIss3PT-UMqKr">
+            <img alt="Akane Inamine" class="catetop-heroimg__review-guest is-hover" data-reactid="9" src="./area_kyoto_files/thumb_1b3556079c2570939374f7a31005628f.jpg">
+          </a>
+          <span class="catetop-heroimg__review-content" data-reactid="10">この度は素敵な場所をご提供頂きましてありがとうございました。ゆったりと使用させて頂きました。またの機会がございましたら宜しくお願い致します。</span>
+          <span class="catetop-heroimg__review-name" data-reactid="11">
+          <a data-reactid="12" href="https://spacemarket.com/users/A7caIss3PT-UMqKr">Akane Inamine</a>
+          <a data-reactid="13" href="https://spacemarket.com/spaces/shimei/rooms/-yAaQzb2-4qF2FYe">3Fホール【京都】戦前の雰囲気をそのまま残した空間で結婚式などのイベントや撮影をしませんか</a><!-- react-text: 14 --> へのレビュー<!-- /react-text --></span></span>
+          </h1>
+        </div>
+      </div>
+      <div class="catetop-search" data-reactid="15">
+        <div class="search-box" data-reactid="16">
+          <form action="https://spacemarket.com/search" data-reactid="17" method="get">
+            <div class="container" data-reactid="18">
+              <div class="row" data-reactid="19">
+                <input data-reactid="20" name="event_type" type="hidden" value="">
+                <div class="col-xs-9 col-sm-9 col-md-4" data-reactid="21">
+                  <input data-reactid="22" name="geocode" type="hidden" value="">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label service-input-icn is-dirty is-upgraded" data-reactid="23" data-upgraded=",MaterialTextfield">
+                    <input aria-autocomplete="both" aria-haspopup="false" autocomplete="off" class="mdl-textfield__input" data-reactid="24" id="textfield-" maxlength="2048" name="location" spellcheck="false" value="京都府"><label class="mdl-textfield__label" data-reactid="25" for="textfield-">エリア</label>
+                  </div>
+                  <div class="autocomplete" data-reactid="26" style="display:none;">
+                    <div class="top__autocomplete-layout autocomplete-layout" data-reactid="27">
+                      <div class="site-header__autocomplete-box" data-reactid="28"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-1" data-reactid="29">
+                  <div class="w100pa select__price-type" data-reactid="30">
+                    <div class="mdl-textfield mdl-js-textfield mdl-select w100pa service-input-icn is-upgraded" data-reactid="31" data-upgraded=",MaterialTextfield">
+                      <input class="mdl-textfield__input" data-reactid="32" type="text"><label class="mdl-textfield__label fa" data-reactid="33"><i class="material-icons" data-reactid="34">access_time</i></label><select class="w100pa js-select__transparent" data-reactid="35" name="price_type">
+                        <option data-reactid="36" selected value="hourly">
+                          時間単位で予約
+                        </option>
+                        <option data-reactid="37" value="daily">
+                          1日単位で予約
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-3" data-reactid="38">
+                  <input data-reactid="39" name="started_at" type="hidden" value="">
+                  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label w100pa service-input-icn is-upgraded" data-reactid="40" data-upgraded=",MaterialTextfield">
+                    <input class="mdl-textfield__input top-search__box-list-input" data-reactid="41" id="textfield-" readonly value=""><label class="mdl-textfield__label" data-reactid="42" for="textfield-">利用日</label>
+                  </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-2" data-reactid="43">
+                  <div class="mdl-textfield mdl-textfield--floating-label is-focused w100pa" data-reactid="44">
+                    <label class="mdl-textfield__label" data-reactid="45">人数</label><span class="service-select material-select" data-reactid="46"><select class="w100pa" data-reactid="47" name="capacity">
+                      <option data-reactid="48" selected value="">
+                        指定なし
+                      </option>
+                      <option data-reactid="49" value="1">
+                        1〜9人
+                      </option>
+                      <option data-reactid="50" value="10">
+                        10人〜
+                      </option>
+                      <option data-reactid="51" value="20">
+                        20人〜
+                      </option>
+                      <option data-reactid="52" value="30">
+                        30人〜
+                      </option>
+                      <option data-reactid="53" value="40">
+                        40人〜
+                      </option>
+                      <option data-reactid="54" value="50">
+                        50人〜
+                      </option>
+                      <option data-reactid="55" value="75">
+                        75人〜
+                      </option>
+                      <option data-reactid="56" value="100">
+                        100人〜
+                      </option>
+                      <option data-reactid="57" value="150">
+                        150人〜
+                      </option>
+                      <option data-reactid="58" value="200">
+                        200人〜
+                      </option>
+                      <option data-reactid="59" value="300">
+                        300人〜
+                      </option>
+                      <option data-reactid="60" value="400">
+                        400人〜
+                      </option>
+                      <option data-reactid="61" value="500">
+                        500人〜
+                      </option>
+                      <option data-reactid="62" value="1000">
+                        1000人〜
+                      </option>
+                    </select></span>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-2" data-reactid="63">
+                  <div class="search-box-button-area" data-reactid="64">
+                    <input class="form-btn form-btn__blue form-btn-top" data-reactid="65" name="" type="submit" value="検索">
+                  </div>
+                </div>
+                <div class="datetime-layout clearfix" data-reactid="66" style="display:none;">
+                  <div class="datetime-layout__inner top__datetime-layout__inner" data-reactid="67">
+                    <div class="datetime-layout__inner-day" data-reactid="68">
+                      <div class="hasDatepicker" data-reactid="69" id="dp1486629958596">
+                        <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-datepicker-multi-2 ui-datepicker-multi" style="width: 34em; display: block;">
+                          <div class="ui-datepicker-group ui-datepicker-group-first">
+                            <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-left">
+                              <a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="&lt;前"><span class="ui-icon ui-icon-circle-triangle-w">&lt;前</span></a>
+                              <div class="ui-datepicker-title">
+                                <span class="ui-datepicker-year">2017</span>年&nbsp;<span class="ui-datepicker-month">2月</span>
+                              </div>
+                            </div>
+                            <table class="ui-datepicker-calendar">
+                              <thead>
+                                <tr>
+                                  <th class="ui-datepicker-week-end" scope="col"><span title="日曜日">日</span></th>
+                                  <th scope="col"><span title="月曜日">月</span></th>
+                                  <th scope="col"><span title="火曜日">火</span></th>
+                                  <th scope="col"><span title="水曜日">水</span></th>
+                                  <th scope="col"><span title="木曜日">木</span></th>
+                                  <th scope="col"><span title="金曜日">金</span></th>
+                                  <th class="ui-datepicker-week-end" scope="col"><span title="土曜日">土</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                  <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                  <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                  <td class=" ui-datepicker-unselectable ui-state-disabled"><span class="ui-state-default">1</span></td>
+                                  <td class=" ui-datepicker-unselectable ui-state-disabled"><span class="ui-state-default">2</span></td>
+                                  <td class=" ui-datepicker-unselectable ui-state-disabled"><span class="ui-state-default">3</span></td>
+                                  <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled"><span class="ui-state-default">4</span></td>
+                                </tr>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled"><span class="ui-state-default">5</span></td>
+                                  <td class=" ui-datepicker-unselectable ui-state-disabled"><span class="ui-state-default">6</span></td>
+                                  <td class=" ui-datepicker-unselectable ui-state-disabled"><span class="ui-state-default">7</span></td>
+                                  <td class=" ui-datepicker-unselectable ui-state-disabled"><span class="ui-state-default">8</span></td>
+                                  <td class=" ui-datepicker-days-cell-over ui-datepicker-current-day ui-datepicker-today" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default ui-state-highlight ui-state-active ui-state-hover" href="https://spacemarket.com/areas/kyoto#">9</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">10</a>
+                                  </td>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">11</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">12</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">13</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">14</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">15</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">16</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">17</a>
+                                  </td>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">18</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">19</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">20</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">21</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">22</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">23</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">24</a>
+                                  </td>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">25</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">26</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">27</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="1" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">28</a>
+                                  </td>
+                                  <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                  <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                  <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                  <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="ui-datepicker-group ui-datepicker-group-last">
+                            <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-right">
+                              <a class="ui-datepicker-next ui-corner-all" data-event="click" data-handler="next" title="次&gt;"><span class="ui-icon ui-icon-circle-triangle-e">次&gt;</span></a>
+                              <div class="ui-datepicker-title">
+                                <span class="ui-datepicker-year">2017</span>年&nbsp;<span class="ui-datepicker-month">3月</span>
+                              </div>
+                            </div>
+                            <table class="ui-datepicker-calendar">
+                              <thead>
+                                <tr>
+                                  <th class="ui-datepicker-week-end" scope="col"><span title="日曜日">日</span></th>
+                                  <th scope="col"><span title="月曜日">月</span></th>
+                                  <th scope="col"><span title="火曜日">火</span></th>
+                                  <th scope="col"><span title="水曜日">水</span></th>
+                                  <th scope="col"><span title="木曜日">木</span></th>
+                                  <th scope="col"><span title="金曜日">金</span></th>
+                                  <th class="ui-datepicker-week-end" scope="col"><span title="土曜日">土</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                  <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                  <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">1</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">2</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">3</a>
+                                  </td>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">4</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">5</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">6</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">7</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">8</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">9</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">10</a>
+                                  </td>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">11</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">12</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">13</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">14</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">15</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">16</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">17</a>
+                                  </td>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">18</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">19</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">20</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">21</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">22</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">23</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">24</a>
+                                  </td>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">25</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class=" ui-datepicker-week-end" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">26</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">27</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">28</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">29</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">30</a>
+                                  </td>
+                                  <td class="" data-event="click" data-handler="selectDay" data-month="2" data-year="2017">
+                                    <a class="ui-state-default" href="https://spacemarket.com/areas/kyoto#">31</a>
+                                  </td>
+                                  <td class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="ui-datepicker-row-break"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="page__even page__padding" data-reactid="70">
+        <div class="container" data-reactid="71">
+          <h2 class="catetop__head-title" data-reactid="72"><!-- react-text: 73 --><%= @prefecture.prefecture %>のレンタルスペース<!-- /react-text --><!-- react-text: 74 -->ランキング TOP3<!-- /react-text --></h2>
+          <ul class="row" data-reactid="75">
+            <li class="col-xs-12 col-md-4 units-item" data-reactid="76">
+              <div class="js-image-keep-aspect units-item__image" data-reactid="77">
+                <a class="js-image-keep-aspect__image" data-reactid="78" href="https://spacemarket.com/spaces/21rNVhOp5WHU2RTF/rooms/JKBB-Jj15SDgT_ix" target="_blank">
+                  <div class="slick-initialized slick-slider" data-reactid="79">
+                    <div class="slick-list" data-reactid="80">
+                      <div class="slick-track" data-reactid="81" style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 2421.89px;">
+                        <img alt="Floor B、JR二条駅より徒歩3分！(K&#39;s office 京都二条の館 JR二条駅から徒歩3分！) の写真0" class="slick-slide slick-active units-item__image-pict is-hover cld-hidpi" data-index="0" data-reactid="82" src="./area_kyoto_files/id3bjm0fdjumwijd7nqm.jpg" style="outline: none; position: relative; left: 0px; opacity: 1; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1">
+                        <div class="slick-slide" data-index="1" data-reactid="83" style="outline: none; position: relative; left: -345.984px; opacity: 0; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1"></div>
+                        <div class="slick-slide" data-index="2" data-reactid="84" style="outline: none; position: relative; left: -691.969px; opacity: 0; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1"></div>
+                        <div class="slick-slide" data-index="3" data-reactid="85" style="outline: none; position: relative; left: -1037.95px; opacity: 0; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1"></div>
+                        <div class="slick-slide" data-index="4" data-reactid="86" style="outline: none; position: relative; left: -1383.94px; opacity: 0; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1"></div>
+                      </div>
+                    </div>
+                  </div>
+                  </a>
+                  <a aria-label="previous" class="units-item__image-prev is-hover" data-reactid="87" href="https://spacemarket.com/areas/kyoto#"><i class="fa fa-chevron-left" data-reactid="88"></i></a>
+                  <a aria-label="next" class="units-item__image-next is-hover" data-reactid="89" href="https://spacemarket.com/areas/kyoto#"><i class="fa fa-chevron-right" data-reactid="90"></i></a>
+                  <a aria-label="favorit" class="units-item-fav" data-reactid="91" href="https://spacemarket.com/areas/kyoto#"><i class="fa fa-heart" data-reactid="92"></i></a>
+                <p class="units-item__item-price" data-reactid="93"><!-- react-text: 94 -->￥1,000<!-- /react-text --><span class="units-item__item-per" data-reactid="95">/時間</span></p>
+              </div>
+              <div class="units-item__body" data-reactid="96">
+                <div data-reactid="97">
+                  <div class="units-item__body-thumb" data-reactid="98">
+                    <a data-reactid="99" href="https://spacemarket.com/owners/ks-office" target="_blank"><img alt="株式会社ゴー・ファスター" data-reactid="100" src="./area_kyoto_files/thumb_4d3f50a51a9c66fe0e8b1afbad1d623b.jpg"></a>
+                  </div>
+                  <div class="baloon user-detail-baloon units-baloon" data-reactid="101" style="display:none;">
+                    <div class="baloon-inner" data-reactid="102">
+                      <img alt="株式会社ゴー・ファスター" class="user-detail-baloon__img" data-reactid="103" src="./area_kyoto_files/thumb_4d3f50a51a9c66fe0e8b1afbad1d623b.jpg">
+                      <p class="user-detail-baloon__name" data-reactid="104">株式会社ゴー・ファスター</p>
+                      <p class="user-detail-baloon__auth" data-reactid="105">メールアドレス</p>
+                      <p class="user-detail-baloon__auth" data-reactid="106">電話番号</p><a class="button-blue user-detail-baloon__button" data-reactid="107" href="https://spacemarket.com/owners/ks-office" target="_blank">詳しいプロフィール</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="units-item__body-inner link__subcolor" data-reactid="108">
+                  <h2 class="units-item__body-title js-line-camp-2" data-reactid="109"><a data-reactid="110" href="https://spacemarket.com/spaces/21rNVhOp5WHU2RTF/rooms/JKBB-Jj15SDgT_ix" target="_blank">Floor B、JR二条駅より徒歩3分！</a></h2>
+                  <ul class="units-item__body-info" data-reactid="111">
+                    <li data-reactid="112">
+                      <i class="fa fa-user mr5" data-reactid="113"></i><a data-reactid="114" href="https://spacemarket.com/search?capacity=13" target="_blank">〜13人</a>
+                    </li>
+                    <li data-reactid="115">
+                      <i class="fa fa-map-marker mr5" data-reactid="116"></i><a data-reactid="117" href="https://spacemarket.com/areas/kyoto/location/%E4%B8%AD%E4%BA%AC%E5%8C%BA" target="_blank">中京区</a>
+                    </li>
+                    <li data-reactid="118">
+                      <a data-reactid="119" href="https://spacemarket.com/spaces/21rNVhOp5WHU2RTF/rooms/JKBB-Jj15SDgT_ix/reputations" target="_blank"><i class="fa fa-star mr2 is-default" data-reactid="120"></i><i class="fa fa-star mr2 is-default" data-reactid="121"></i><i class="fa fa-star mr2 is-default" data-reactid="122"></i><i class="fa fa-star mr2 is-default" data-reactid="123"></i><i class="fa fa-star mr2 is-default" data-reactid="124"></i></a><a data-reactid="125" href="https://spacemarket.com/spaces/21rNVhOp5WHU2RTF/rooms/JKBB-Jj15SDgT_ix/reputations" target="_blank"><!-- react-text: 126 -->0<!-- /react-text --><!-- react-text: 127 -->件<!-- /react-text --></a>
+                    </li>
+                  </ul>
+                </div>
+                <p class="units-item__body-access js-line-camp-1" data-reactid="128">JR二条駅より徒歩3分 バス停千本三条・朱雀立命館前より徒歩1分 JR二条駅よりの道順案内動画 https://youtu.be/l7dxU6lUC60</p>
+              </div>
+            </li>
+            <li class="col-xs-12 col-md-4 units-item" data-reactid="129">
+              <div class="js-image-keep-aspect units-item__image" data-reactid="130">
+                <a class="js-image-keep-aspect__image" data-reactid="131" href="https://spacemarket.com/spaces/shimei/rooms/Udfn1OwkOrmRLldB" target="_blank">
+                <div class="slick-initialized slick-slider" data-reactid="132">
+                  <div class="slick-list" data-reactid="133">
+                    <div class="slick-track" data-reactid="134" style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 1037.95px;"><img alt="2F和室【京都】登録有形文化財の登録をいただきました。戦前の雰囲気をそのまま残した空間でイベントや撮影をしませんか？(紫明会館) の写真0" class="slick-slide slick-active units-item__image-pict is-hover cld-hidpi" data-index="0" data-reactid="135" src="./area_kyoto_files/ztm93a9dxhwyqhvkcxco.jpg" style="outline: none; position: relative; left: 0px; opacity: 1; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1"></div>
+                  </div>
+                </div></a><a aria-label="previous" class="units-item__image-prev is-hover" data-reactid="136" href="https://spacemarket.com/areas/kyoto#"><i class="fa fa-chevron-left" data-reactid="137"></i></a><a aria-label="next" class="units-item__image-next is-hover" data-reactid="138" href="https://spacemarket.com/areas/kyoto#"><i class="fa fa-chevron-right" data-reactid="139"></i></a><a aria-label="favorit" class="units-item-fav" data-reactid="140" href="https://spacemarket.com/areas/kyoto#"><i class="fa fa-heart" data-reactid="141"></i></a>
+                <p class="units-item__item-price" data-reactid="142"><!-- react-text: 143 -->￥2,000<!-- /react-text --><span class="units-item__item-per" data-reactid="144">/3時間〜</span><!-- react-text: 145 -->￥6,500<!-- /react-text --><span class="units-item__item-per" data-reactid="146">/12時間</span></p>
+              </div>
+              <div class="units-item__body" data-reactid="147">
+                <div data-reactid="148">
+                  <div class="units-item__body-thumb" data-reactid="149">
+                    <a data-reactid="150" href="https://spacemarket.com/owners/reallink" target="_blank"><img alt="特定非営利活動法人リアル・リンク京都" data-reactid="151" src="./area_kyoto_files/thumb_cd9d57e692839a12ecd08d87425f0f84.jpg"></a>
+                  </div>
+                  <div class="baloon user-detail-baloon units-baloon" data-reactid="152" style="display:none;">
+                    <div class="baloon-inner" data-reactid="153">
+                      <img alt="特定非営利活動法人リアル・リンク京都" class="user-detail-baloon__img" data-reactid="154" src="./area_kyoto_files/thumb_cd9d57e692839a12ecd08d87425f0f84.jpg">
+                      <p class="user-detail-baloon__name" data-reactid="155">特定非営利活動法人リアル・リンク京都</p>
+                      <p class="user-detail-baloon__auth" data-reactid="156">メールアドレス</p>
+                      <p class="user-detail-baloon__auth" data-reactid="157">電話番号</p><a class="button-blue user-detail-baloon__button" data-reactid="158" href="https://spacemarket.com/owners/reallink" target="_blank">詳しいプロフィール</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="units-item__body-inner link__subcolor" data-reactid="159">
+                  <h2 class="units-item__body-title js-line-camp-2" data-reactid="160"><a data-reactid="161" href="https://spacemarket.com/spaces/shimei/rooms/Udfn1OwkOrmRLldB" target="_blank">2F和室【京都】登録有形文化財の登録をいただきました。戦前の雰囲気をそのまま残した空間でイベントや撮影をしませんか？</a></h2>
+                  <ul class="units-item__body-info" data-reactid="162">
+                    <li data-reactid="163">
+                      <i class="fa fa-user mr5" data-reactid="164"></i><a data-reactid="165" href="https://spacemarket.com/search?capacity=10" target="_blank">〜10人</a>
+                    </li>
+                    <li data-reactid="166">
+                      <i class="fa fa-map-marker mr5" data-reactid="167"></i><a data-reactid="168" href="https://spacemarket.com/areas/kyoto/location/%E4%BA%AC%E9%83%BD%E5%B8%82" target="_blank">京都市</a>
+                    </li>
+                    <li data-reactid="169">
+                      <a data-reactid="170" href="https://spacemarket.com/spaces/shimei/rooms/Udfn1OwkOrmRLldB/reputations" target="_blank"><i class="fa fa-star mr2 is-checked" data-reactid="171"></i><i class="fa fa-star mr2 is-checked" data-reactid="172"></i><i class="fa fa-star mr2 is-checked" data-reactid="173"></i><i class="fa fa-star mr2 is-checked" data-reactid="174"></i><i class="fa fa-star mr2 is-checked" data-reactid="175"></i></a><a data-reactid="176" href="https://spacemarket.com/spaces/shimei/rooms/Udfn1OwkOrmRLldB/reputations" target="_blank"><!-- react-text: 177 -->1<!-- /react-text --><!-- react-text: 178 -->件<!-- /react-text --></a>
+                    </li>
+                  </ul>
+                </div>
+                <p class="units-item__body-access js-line-camp-1" data-reactid="179">京都市営地下鉄烏丸線鞍馬口駅より徒歩７分</p>
+              </div>
+            </li>
+            <li class="col-xs-12 col-md-4 units-item" data-reactid="180">
+              <div class="js-image-keep-aspect units-item__image" data-reactid="181">
+                <a class="js-image-keep-aspect__image" data-reactid="182" href="https://spacemarket.com/spaces/soushunan/rooms/gRXf_v2EB0hJl0X9" target="_blank">
+                <div class="slick-initialized slick-slider" data-reactid="183">
+                  <div class="slick-list" data-reactid="184">
+                    <div class="slick-track" data-reactid="185" style="opacity: 1; transform: translate3d(0px, 0px, 0px); width: 2421.89px;">
+                      <img alt="【京都】歴史を感じる町屋・古民家を貸し切ってみませんか？「箏春庵(Soushunan)」(【京都・町家・古民家】箏春庵(Soushunan)) の写真0" class="slick-slide slick-active units-item__image-pict is-hover cld-hidpi" data-index="0" data-reactid="186" src="./area_kyoto_files/urf2dlfggko2lrjytghv.jpg" style="outline: none; position: relative; left: 0px; opacity: 1; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1">
+                      <div class="slick-slide" data-index="1" data-reactid="187" style="outline: none; position: relative; left: -345.984px; opacity: 0; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1"></div>
+                      <div class="slick-slide" data-index="2" data-reactid="188" style="outline: none; position: relative; left: -691.969px; opacity: 0; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1"></div>
+                      <div class="slick-slide" data-index="3" data-reactid="189" style="outline: none; position: relative; left: -1037.95px; opacity: 0; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1"></div>
+                      <div class="slick-slide" data-index="4" data-reactid="190" style="outline: none; position: relative; left: -1383.94px; opacity: 0; transition: opacity 0ms ease; width: 345.984px;" tabindex="-1"></div>
+                    </div>
+                  </div>
+                </div></a><a aria-label="previous" class="units-item__image-prev is-hover" data-reactid="191" href="https://spacemarket.com/areas/kyoto#"><i class="fa fa-chevron-left" data-reactid="192"></i></a><a aria-label="next" class="units-item__image-next is-hover" data-reactid="193" href="https://spacemarket.com/areas/kyoto#"><i class="fa fa-chevron-right" data-reactid="194"></i></a><a aria-label="favorit" class="units-item-fav" data-reactid="195" href="https://spacemarket.com/areas/kyoto#"><i class="fa fa-heart" data-reactid="196"></i></a>
+                <p class="units-item__item-price" data-reactid="197"><!-- react-text: 198 -->￥3,000<!-- /react-text --><span class="units-item__item-per" data-reactid="199">〜</span><!-- react-text: 200 -->￥5,000<!-- /react-text --><span class="units-item__item-per" data-reactid="201">/時間</span></p>
+              </div>
+              <div class="units-item__body" data-reactid="202">
+                <div data-reactid="203">
+                  <div class="units-item__body-thumb" data-reactid="204">
+                    <a data-reactid="205" href="https://spacemarket.com/owners/kyoto_soushunan" target="_blank"><img alt="島崎レイコ" data-reactid="206" src="./area_kyoto_files/thumb_dfd28c3ec8033fa90052120484720c15.png"></a>
+                  </div>
+                  <div class="baloon user-detail-baloon units-baloon" data-reactid="207" style="display:none;">
+                    <div class="baloon-inner" data-reactid="208">
+                      <img alt="島崎レイコ" class="user-detail-baloon__img" data-reactid="209" src="./area_kyoto_files/thumb_dfd28c3ec8033fa90052120484720c15.png">
+                      <p class="user-detail-baloon__name" data-reactid="210">島崎レイコ</p>
+                      <p class="user-detail-baloon__auth" data-reactid="211">メールアドレス</p>
+                      <p class="user-detail-baloon__auth" data-reactid="212">電話番号</p><a class="button-blue user-detail-baloon__button" data-reactid="213" href="https://spacemarket.com/owners/kyoto_soushunan" target="_blank">詳しいプロフィール</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="units-item__body-inner link__subcolor" data-reactid="214">
+                  <h2 class="units-item__body-title js-line-camp-2" data-reactid="215"><a data-reactid="216" href="https://spacemarket.com/spaces/soushunan/rooms/gRXf_v2EB0hJl0X9" target="_blank">【京都】歴史を感じる町屋・古民家を貸し切ってみませんか？「箏春庵(Soushunan)」</a></h2>
+                  <ul class="units-item__body-info" data-reactid="217">
+                    <li data-reactid="218">
+                      <i class="fa fa-user mr5" data-reactid="219"></i><a data-reactid="220" href="https://spacemarket.com/search?capacity=15" target="_blank">〜15人</a>
+                    </li>
+                    <li data-reactid="221">
+                      <i class="fa fa-map-marker mr5" data-reactid="222"></i><a data-reactid="223" href="https://spacemarket.com/areas/kyoto/location/%E4%BA%AC%E9%83%BD%E5%B8%82" target="_blank">京都市</a>
+                    </li>
+                    <li data-reactid="224">
+                      <a data-reactid="225" href="https://spacemarket.com/spaces/soushunan/rooms/gRXf_v2EB0hJl0X9/reputations" target="_blank"><i class="fa fa-star mr2 is-checked" data-reactid="226"></i><i class="fa fa-star mr2 is-checked" data-reactid="227"></i><i class="fa fa-star mr2 is-checked" data-reactid="228"></i><i class="fa fa-star mr2 is-checked" data-reactid="229"></i><i class="fa fa-star mr2 is-default" data-reactid="230"></i></a><a data-reactid="231" href="https://spacemarket.com/spaces/soushunan/rooms/gRXf_v2EB0hJl0X9/reputations" target="_blank"><!-- react-text: 232 -->1<!-- /react-text --><!-- react-text: 233 -->件<!-- /react-text --></a>
+                    </li>
+                  </ul>
+                </div>
+                <p class="units-item__body-access js-line-camp-1" data-reactid="234">市バス「千本出水」から徒歩1分。JR「二条」駅より徒歩15分またはタクシーで5分。</p>
+              </div>
+            </li>
+          </ul>
+          <div class="top-more__area" data-reactid="235">
+            <a class="button-blue top-more__area-button" data-reactid="236" href="https://spacemarket.com/areas/kyoto/ranking">ランキングをもっと見る</a>
+          </div>
+        </div>
+      </div>
+      <div class="page__odd page__padding" data-reactid="237">
+        <div class="container" data-reactid="238">
+          <h2 class="catetop__head-title" data-reactid="239">新着レビューから探す</h2>
+          <ul class="row" data-reactid="240">
+            <li class="col-xs-12 col-md-4" data-reactid="241">
+              <a data-reactid="242" href="https://spacemarket.com/users/gDbCT9XmPixSgfmy"><img alt="Inaka Megumi" class="is-hover catetop-rewiew__guest" data-reactid="243" src="./area_kyoto_files/thumb_873f0121113afc0776aed193d8560b60.jpg"></a>
+              <div class="catetop-review__head" data-reactid="244">
+                <p class="catetop-review__name" data-reactid="245"><a data-reactid="246" href="https://spacemarket.com/users/gDbCT9XmPixSgfmy">Inaka Megumi</a><span class="catetop-review__date" data-reactid="247">2017年02月実施</span></p>
+                <p class="catetop-review__space" data-reactid="248"><a data-reactid="249" href="https://spacemarket.com/spaces/shimei/rooms/-yAaQzb2-4qF2FYe">3Fホール【京都】戦前の雰囲気をそのまま残した空間で結婚式などのイベントや撮影をしませんか</a></p>
+              </div><a class="catetop-review__content is-hover" data-reactid="250" href="https://spacemarket.com/spaces/shimei/rooms/-yAaQzb2-4qF2FYe">
+              <p class="catetop-review__content-inner" data-reactid="251">歴史のある会館でのカンファレンスで、盛り上がりました。寒い冬の日かつ木造建築だったので、エアコンの効きだけが気になりましたが、雰囲氣やコスパ、全体を考えれば些細なことです。またよろしくお願いします！</p></a>
+            </li>
+            <li class="col-xs-12 col-md-4" data-reactid="252">
+              <a data-reactid="253" href="https://spacemarket.com/users/A7caIss3PT-UMqKr"><img alt="Akane Inamine" class="is-hover catetop-rewiew__guest" data-reactid="254" src="./area_kyoto_files/thumb_1b3556079c2570939374f7a31005628f.jpg"></a>
+              <div class="catetop-review__head" data-reactid="255">
+                <p class="catetop-review__name" data-reactid="256"><a data-reactid="257" href="https://spacemarket.com/users/A7caIss3PT-UMqKr">Akane Inamine</a><span class="catetop-review__date" data-reactid="258">2017年02月実施</span></p>
+                <p class="catetop-review__space" data-reactid="259"><a data-reactid="260" href="https://spacemarket.com/spaces/shimei/rooms/-yAaQzb2-4qF2FYe">3Fホール【京都】戦前の雰囲気をそのまま残した空間で結婚式などのイベントや撮影をしませんか</a></p>
+              </div><a class="catetop-review__content is-hover" data-reactid="261" href="https://spacemarket.com/spaces/shimei/rooms/-yAaQzb2-4qF2FYe">
+              <p class="catetop-review__content-inner" data-reactid="262">この度は素敵な場所をご提供頂きましてありがとうございました。ゆったりと使用させて頂きました。またの機会がございましたら宜しくお願い致します。</p></a>
+            </li>
+            <li class="col-xs-12 col-md-4" data-reactid="263">
+              <a data-reactid="264" href="https://spacemarket.com/users/-2k8h7YVDM5hAAyY"><img alt="藤家 高嶺" class="is-hover catetop-rewiew__guest" data-reactid="265" src="./area_kyoto_files/thumb_ae9890589f3a4fa9ff0666159087b34e.jpg"></a>
+              <div class="catetop-review__head" data-reactid="266">
+                <p class="catetop-review__name" data-reactid="267"><a data-reactid="268" href="https://spacemarket.com/users/-2k8h7YVDM5hAAyY">藤家 高嶺</a><span class="catetop-review__date" data-reactid="269">2017年01月実施</span></p>
+                <p class="catetop-review__space" data-reactid="270"><a data-reactid="271" href="https://spacemarket.com/spaces/794space/rooms/vcnWVqS1oEM03Ugd">京町家の9畳スペース 京都 四条大宮(阪急大宮) 駅徒歩７分 飲食持込可 駐輪場完備 町屋 京町屋</a></p>
+              </div><a class="catetop-review__content is-hover" data-reactid="272" href="https://spacemarket.com/spaces/794space/rooms/vcnWVqS1oEM03Ugd">
+              <p class="catetop-review__content-inner" data-reactid="273">10人ほどで新年会に使わせていただきました。入る時間に合わせて空調も効かせておいて頂いた上に、電気ストーブまでお借りできたので気持ちの良い時間を過ごすことができました。 また利用したいと思います。</p></a>
+            </li>
+          </ul>
+          <div class="top-more__area" data-reactid="274">
+            <a class="button-blue top-more__area-button" data-reactid="275" href="https://spacemarket.com/areas/kyoto/reputations">新着レビューをもっと見る</a>
+          </div>
+        </div>
+      </div>
+      <div class="page__even page__padding" data-reactid="276">
+        <div class="container" data-reactid="277">
+          <h2 class="catetop__head-title" data-reactid="278">目的で絞り込む</h2>
+          <ul class="row" data-reactid="279">
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="280">
+              <a class="catetop-conditions__condition is-hover" data-reactid="281" href="https://spacemarket.com/event_types/party/areas/kyoto">
+              <h3 data-reactid="282">パーティー</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="283">
+              <a class="catetop-conditions__condition is-hover" data-reactid="284" href="https://spacemarket.com/event_types/class/areas/kyoto">
+              <h3 data-reactid="285">会議・研修</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="286">
+              <a class="catetop-conditions__condition is-hover" data-reactid="287" href="https://spacemarket.com/event_types/photo_shoot/areas/kyoto">
+              <h3 data-reactid="288">写真撮影</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="289">
+              <a class="catetop-conditions__condition is-hover" data-reactid="290" href="https://spacemarket.com/event_types/film_shoot/areas/kyoto">
+              <h3 data-reactid="291">ロケ撮影</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="292">
+              <a class="catetop-conditions__condition is-hover" data-reactid="293" href="https://spacemarket.com/event_types/performance/areas/kyoto">
+              <h3 data-reactid="294">演奏・パフォーマンス</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="295">
+              <a class="catetop-conditions__condition is-hover" data-reactid="296" href="https://spacemarket.com/event_types/studio/areas/kyoto">
+              <h3 data-reactid="297">個展・展示会</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="298">
+              <a class="catetop-conditions__condition is-hover" data-reactid="299" href="https://spacemarket.com/event_types/sports/areas/kyoto">
+              <h3 data-reactid="300">スポーツ・フィットネス</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="301">
+              <a class="catetop-conditions__condition is-hover" data-reactid="302" href="https://spacemarket.com/event_types/office/areas/kyoto">
+              <h3 data-reactid="303">オフィス</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="304">
+              <a class="catetop-conditions__condition is-hover" data-reactid="305" href="https://spacemarket.com/event_types/wedding/areas/kyoto">
+              <h3 data-reactid="306">結婚式</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="307">
+              <a class="catetop-conditions__condition is-hover" data-reactid="308" href="https://spacemarket.com/event_types/event/areas/kyoto">
+              <h3 data-reactid="309">イベント</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="310">
+              <a class="catetop-conditions__condition is-hover" data-reactid="311" href="https://spacemarket.com/event_types/other/areas/kyoto">
+              <h3 data-reactid="312">その他</h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page__odd page__padding" data-reactid="313">
+        <div class="container" data-reactid="314">
+          <h2 class="catetop__head-title" data-reactid="315">人数で絞り込む</h2>
+          <ul class="row" data-reactid="316">
+            <li class="col-xs-6 col-md-2" data-reactid="317">
+              <a class="catetop-conditions__condition is-hover" data-reactid="318" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=10">
+              <h3 data-reactid="319"><!-- react-text: 320 -->10<!-- /react-text --><!-- react-text: 321 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="322">
+              <a class="catetop-conditions__condition is-hover" data-reactid="323" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=20">
+              <h3 data-reactid="324"><!-- react-text: 325 -->20<!-- /react-text --><!-- react-text: 326 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="327">
+              <a class="catetop-conditions__condition is-hover" data-reactid="328" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=30">
+              <h3 data-reactid="329"><!-- react-text: 330 -->30<!-- /react-text --><!-- react-text: 331 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="332">
+              <a class="catetop-conditions__condition is-hover" data-reactid="333" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=40">
+              <h3 data-reactid="334"><!-- react-text: 335 -->40<!-- /react-text --><!-- react-text: 336 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="337">
+              <a class="catetop-conditions__condition is-hover" data-reactid="338" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=50">
+              <h3 data-reactid="339"><!-- react-text: 340 -->50<!-- /react-text --><!-- react-text: 341 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="342">
+              <a class="catetop-conditions__condition is-hover" data-reactid="343" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=75">
+              <h3 data-reactid="344"><!-- react-text: 345 -->75<!-- /react-text --><!-- react-text: 346 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="347">
+              <a class="catetop-conditions__condition is-hover" data-reactid="348" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=100">
+              <h3 data-reactid="349"><!-- react-text: 350 -->100<!-- /react-text --><!-- react-text: 351 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="352">
+              <a class="catetop-conditions__condition is-hover" data-reactid="353" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=150">
+              <h3 data-reactid="354"><!-- react-text: 355 -->150<!-- /react-text --><!-- react-text: 356 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="357">
+              <a class="catetop-conditions__condition is-hover" data-reactid="358" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=200">
+              <h3 data-reactid="359"><!-- react-text: 360 -->200<!-- /react-text --><!-- react-text: 361 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="362">
+              <a class="catetop-conditions__condition is-hover" data-reactid="363" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=300">
+              <h3 data-reactid="364"><!-- react-text: 365 -->300<!-- /react-text --><!-- react-text: 366 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="367">
+              <a class="catetop-conditions__condition is-hover" data-reactid="368" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=400">
+              <h3 data-reactid="369"><!-- react-text: 370 -->400<!-- /react-text --><!-- react-text: 371 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="372">
+              <a class="catetop-conditions__condition is-hover" data-reactid="373" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=500">
+              <h3 data-reactid="374"><!-- react-text: 375 -->500<!-- /react-text --><!-- react-text: 376 -->人〜<!-- /react-text --></h3></a>
+            </li>
+            <li class="col-xs-6 col-md-2" data-reactid="377">
+              <a class="catetop-conditions__condition is-hover" data-reactid="378" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;capacity=1000">
+              <h3 data-reactid="379"><!-- react-text: 380 -->1000<!-- /react-text --><!-- react-text: 381 -->人〜<!-- /react-text --></h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page__even page__padding" data-reactid="382">
+        <div class="container" data-reactid="383">
+          <h2 class="catetop__head-title" data-reactid="384">アメニティで絞り込む</h2>
+          <ul class="row" data-reactid="385">
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="386">
+              <a class="catetop-conditions__condition is-hover" data-reactid="387" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=tables"><i class="icon icon-spm-tables" data-reactid="388"></i>
+              <h3 data-reactid="389">テーブル</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="390">
+              <a class="catetop-conditions__condition is-hover" data-reactid="391" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=chairs"><i class="icon icon-spm-chairs" data-reactid="392"></i>
+              <h3 data-reactid="393">椅子</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="394">
+              <a class="catetop-conditions__condition is-hover" data-reactid="395" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=projector"><i class="icon icon-spm-projector" data-reactid="396"></i>
+              <h3 data-reactid="397">プロジェクター</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="398">
+              <a class="catetop-conditions__condition is-hover" data-reactid="399" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=parking"><i class="icon icon-spm-parking" data-reactid="400"></i>
+              <h3 data-reactid="401">駐車場</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="402">
+              <a class="catetop-conditions__condition is-hover" data-reactid="403" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=wifi"><i class="icon icon-spm-wifi" data-reactid="404"></i>
+              <h3 data-reactid="405">WIFI</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="406">
+              <a class="catetop-conditions__condition is-hover" data-reactid="407" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=whiteboard"><i class="icon icon-spm-whiteboard" data-reactid="408"></i>
+              <h3 data-reactid="409">ホワイトボード</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="410">
+              <a class="catetop-conditions__condition is-hover" data-reactid="411" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=printer"><i class="icon icon-spm-printer" data-reactid="412"></i>
+              <h3 data-reactid="413">プリンター</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="414">
+              <a class="catetop-conditions__condition is-hover" data-reactid="415" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=kitchen_facilities"><i class="icon icon-spm-kitchen_facilities" data-reactid="416"></i>
+              <h3 data-reactid="417">キッチン設備</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="418">
+              <a class="catetop-conditions__condition is-hover" data-reactid="419" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=kitchen_equipment"><i class="icon icon-spm-kitchen_equipment" data-reactid="420"></i>
+              <h3 data-reactid="421">調理機材</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="422">
+              <a class="catetop-conditions__condition is-hover" data-reactid="423" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=tv"><i class="icon icon-spm-tv" data-reactid="424"></i>
+              <h3 data-reactid="425">テレビ</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="426">
+              <a class="catetop-conditions__condition is-hover" data-reactid="427" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=lockers"><i class="icon icon-spm-lockers" data-reactid="428"></i>
+              <h3 data-reactid="429">ロッカー</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="430">
+              <a class="catetop-conditions__condition is-hover" data-reactid="431" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=catering_services"><i class="icon icon-spm-catering_services" data-reactid="432"></i>
+              <h3 data-reactid="433">ケータリング</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="434">
+              <a class="catetop-conditions__condition is-hover" data-reactid="435" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=bar"><i class="icon icon-spm-bar" data-reactid="436"></i>
+              <h3 data-reactid="437">バー</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="438">
+              <a class="catetop-conditions__condition is-hover" data-reactid="439" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=sound_system"><i class="icon icon-spm-sound_system" data-reactid="440"></i>
+              <h3 data-reactid="441">音響設備</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="442">
+              <a class="catetop-conditions__condition is-hover" data-reactid="443" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=mirrors"><i class="icon icon-spm-mirrors" data-reactid="444"></i>
+              <h3 data-reactid="445">ミラー</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="446">
+              <a class="catetop-conditions__condition is-hover" data-reactid="447" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=showers"><i class="icon icon-spm-showers" data-reactid="448"></i>
+              <h3 data-reactid="449">シャワー</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="450">
+              <a class="catetop-conditions__condition is-hover" data-reactid="451" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=changing_room"><i class="icon icon-spm-changing_room" data-reactid="452"></i>
+              <h3 data-reactid="453">更衣室</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="454">
+              <a class="catetop-conditions__condition is-hover" data-reactid="455" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=lighting_equipment"><i class="icon icon-spm-lighting_equipment" data-reactid="456"></i>
+              <h3 data-reactid="457">照明設備</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="458">
+              <a class="catetop-conditions__condition is-hover" data-reactid="459" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=photography_equipment"><i class="icon icon-spm-photography_equipment" data-reactid="460"></i>
+              <h3 data-reactid="461">写真撮影機材</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="462">
+              <a class="catetop-conditions__condition is-hover" data-reactid="463" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=film_equipment"><i class="icon icon-spm-film_equipment" data-reactid="464"></i>
+              <h3 data-reactid="465">動画撮影機材</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="466">
+              <a class="catetop-conditions__condition is-hover" data-reactid="467" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=public_transportation"><i class="icon icon-spm-public_transportation" data-reactid="468"></i>
+              <h3 data-reactid="469">公共交通機関</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="470">
+              <a class="catetop-conditions__condition is-hover" data-reactid="471" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=toilet"><i class="icon icon-spm-toilet" data-reactid="472"></i>
+              <h3 data-reactid="473">トイレ</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="474">
+              <a class="catetop-conditions__condition is-hover" data-reactid="475" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=refrigerator"><i class="icon icon-spm-refrigerator" data-reactid="476"></i>
+              <h3 data-reactid="477">冷蔵庫</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="478">
+              <a class="catetop-conditions__condition is-hover" data-reactid="479" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=power_equipment"><i class="icon icon-spm-power_equipment" data-reactid="480"></i>
+              <h3 data-reactid="481">電源</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="482">
+              <a class="catetop-conditions__condition is-hover" data-reactid="483" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=air_conditioner"><i class="icon icon-spm-air_conditioner" data-reactid="484"></i>
+              <h3 data-reactid="485">冷暖房</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="486">
+              <a class="catetop-conditions__condition is-hover" data-reactid="487" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=restaurant"><i class="icon icon-spm-restaurant" data-reactid="488"></i>
+              <h3 data-reactid="489">周辺に飲食店</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="490">
+              <a class="catetop-conditions__condition is-hover" data-reactid="491" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=market"><i class="icon icon-spm-market" data-reactid="492"></i>
+              <h3 data-reactid="493">スーパー/コンビニ</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="494">
+              <a class="catetop-conditions__condition is-hover" data-reactid="495" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=accessibility"><i class="icon icon-spm-accessibility" data-reactid="496"></i>
+              <h3 data-reactid="497">バリアフリー</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="498">
+              <a class="catetop-conditions__condition is-hover" data-reactid="499" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=drinking"><i class="icon icon-spm-drinking" data-reactid="500"></i>
+              <h3 data-reactid="501">飲酒可</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="502">
+              <a class="catetop-conditions__condition is-hover" data-reactid="503" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=pet"><i class="icon icon-spm-pet" data-reactid="504"></i>
+              <h3 data-reactid="505">ペット可</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="506">
+              <a class="catetop-conditions__condition is-hover" data-reactid="507" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=child"><i class="icon icon-spm-child" data-reactid="508"></i>
+              <h3 data-reactid="509">子連れ可</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-3" data-reactid="510">
+              <a class="catetop-conditions__condition is-hover" data-reactid="511" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;amenities=smoking"><i class="icon icon-spm-smoking" data-reactid="512"></i>
+              <h3 data-reactid="513">喫煙可</h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="page__odd page__padding" data-reactid="514">
+        <div class="container" data-reactid="515">
+          <h2 class="catetop__head-title" data-reactid="516">会場タイプで絞り込む</h2>
+          <ul class="row" data-reactid="517">
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="518">
+              <a class="catetop-conditions__condition is-hover" data-reactid="519" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=event_space">
+              <h3 data-reactid="520">イベントスペース</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="521">
+              <a class="catetop-conditions__condition is-hover" data-reactid="522" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=wedding">
+              <h3 data-reactid="523">結婚式場</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="524">
+              <a class="catetop-conditions__condition is-hover" data-reactid="525" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=office">
+              <h3 data-reactid="526">オフィススペース</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="527">
+              <a class="catetop-conditions__condition is-hover" data-reactid="528" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=hall">
+              <h3 data-reactid="529">ホール</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="530">
+              <a class="catetop-conditions__condition is-hover" data-reactid="531" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=meeting_space">
+              <h3 data-reactid="532">貸し会議室</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="533">
+              <a class="catetop-conditions__condition is-hover" data-reactid="534" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=studio">
+              <h3 data-reactid="535">スタジオ</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="536">
+              <a class="catetop-conditions__condition is-hover" data-reactid="537" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=cafe">
+              <h3 data-reactid="538">カフェ</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="539">
+              <a class="catetop-conditions__condition is-hover" data-reactid="540" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=restaurant">
+              <h3 data-reactid="541">レストラン</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="542">
+              <a class="catetop-conditions__condition is-hover" data-reactid="543" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=theatre">
+              <h3 data-reactid="544">映画館</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="545">
+              <a class="catetop-conditions__condition is-hover" data-reactid="546" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=gallery">
+              <h3 data-reactid="547">ギャラリー</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="548">
+              <a class="catetop-conditions__condition is-hover" data-reactid="549" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=bar">
+              <h3 data-reactid="550">バー</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="551">
+              <a class="catetop-conditions__condition is-hover" data-reactid="552" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=sports_facilities">
+              <h3 data-reactid="553">スポーツ施設</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="554">
+              <a class="catetop-conditions__condition is-hover" data-reactid="555" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=hotel">
+              <h3 data-reactid="556">ホテル</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="557">
+              <a class="catetop-conditions__condition is-hover" data-reactid="558" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=residential">
+              <h3 data-reactid="559">住宅</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="560">
+              <a class="catetop-conditions__condition is-hover" data-reactid="561" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=warehouse">
+              <h3 data-reactid="562">倉庫</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="563">
+              <a class="catetop-conditions__condition is-hover" data-reactid="564" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=winaery">
+              <h3 data-reactid="565">ワイナリー・蔵</h3></a>
+            </li>
+            <li class="col-xs-12 col-md-4 col-lg-15" data-reactid="566">
+              <a class="catetop-conditions__condition is-hover" data-reactid="567" href="https://spacemarket.com/search?state=kyoto&amp;location=%E4%BA%AC%E9%83%BD%E5%BA%9C&amp;spaceType=other">
+              <h3 data-reactid="568">その他</h3></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  ga('ec:addImpression', {
+   'id': '30029',
+   'name': 'Floor B、JR二条駅より徒歩3分！',
+   'category': 'jp/kyoto/residential',
+   'brand': '3491',
+   'list': 'CategoryHome',
+   'position': '0',
+   'dimension1': 'Room'
+  });
+  ga('ec:addImpression', {
+   'id': '11248',
+   'name': '2F和室【京都】登録有形文化財の登録をいただきました。戦前の雰囲気をそのまま残した空間でイベントや撮影をしませんか？',
+   'category': 'jp/kyoto/event_space',
+   'brand': '691',
+   'list': 'CategoryHome',
+   'position': '1',
+   'dimension1': 'Room'
+  });
+  ga('ec:addImpression', {
+   'id': '1239',
+   'name': '【京都】歴史を感じる町屋・古民家を貸し切ってみませんか？「箏春庵(Soushunan)」',
+   'category': 'jp/kyoto/residential',
+   'brand': '245',
+   'list': 'CategoryHome',
+   'position': '2',
+   'dimension1': 'Room'
+  });
+  ga('send', 'event', 'Ecommerce', 'addImpression');
+  </script>
+<footer id="js-site-footer">
+ <%= render partial: 'share/footer' %>
+</footer>
+
+  <div id="js-baloon-container"></div>
+
+<iframe frameborder="0" id="stripeXDM_default451539_provider" name="stripeXDM_default451539_provider" src="./area_kyoto_files/channel.html" style="position: absolute; top: -2000px; left: 0px;"></iframe>
+  <div id="cboxOverlay" style="display: none;"></div>
+  <div class="" id="colorbox" role="dialog" style="display: none;" tabindex="-1">
+    <div id="cboxWrapper">
+      <div>
+        <div id="cboxTopLeft" style="float: left;"></div>
+        <div id="cboxTopCenter" style="float: left;"></div>
+        <div id="cboxTopRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxMiddleLeft" style="float: left;"></div>
+        <div id="cboxContent" style="float: left;">
+          <div id="cboxTitle" style="float: left;"></div>
+          <div id="cboxCurrent" style="float: left;"></div><button id="cboxPrevious" type="button"></button> <button id="cboxNext" type="button"></button> <button id="cboxSlideshow" type="button"></button>
+          <div id="cboxLoadingOverlay" style="float: left;"></div>
+          <div id="cboxLoadingGraphic" style="float: left;"></div>
+        </div>
+        <div id="cboxMiddleRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxBottomLeft" style="float: left;"></div>
+        <div id="cboxBottomCenter" style="float: left;"></div>
+        <div id="cboxBottomRight" style="float: left;"></div>
+      </div>
+    </div>
+    <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+  </div>
+  <div id="criteo-tags-div" style="display: none;">
+    <script async="true" src="./area_kyoto_files/event" type="text/javascript">
+    </script><iframe height="0" src="./area_kyoto_files/saved_resource.html" style="display: none;" width="0"></iframe> <iframe height="0" src="./area_kyoto_files/dis.html" style="display: none;" width="0"></iframe>
+  </div>
+  <div class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" id="ui-datepicker-div"></div>
+  <div class="skiptranslate" dir="ltr" id="goog-gt-tt">
+    <div style="padding: 8px;">
+      <div>
+        <div class="logo"><img alt="Google 翻訳" height="20" src="./area_kyoto_files/translate_24dp.png" width="20"></div>
+      </div>
+    </div>
+    <div class="top" style="padding: 8px; float: left; width: 100%;">
+      <h1 class="title gray">原文</h1>
+    </div>
+    <div class="middle" style="padding: 8px;">
+      <div class="original-text"></div>
+    </div>
+    <div class="bottom" style="padding: 8px;">
+      <div class="activity-links">
+        <span class="activity-link">翻訳を改善する</span><span class="activity-link"></span>
+      </div>
+      <div class="started-activity-container">
+        <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+        <div class="activity-root"></div>
+      </div>
+    </div>
+    <div class="status-message" style="display: none;"></div>
+  </div>
+  <div>
+    <div id="adpyt" style="position:fixed;width:100%;height:100%;background-color:#00006C;z-index: 99999999999999999999;display:none;top:0;left:0;opacity:0.99;">
+      <iframe src="./area_kyoto_files/saved_resource(1).html" style="width:0;height:0;display:none;"></iframe>
+    </div>
+  </div>
+  <div class="goog-te-spinner-pos">
+    <div class="goog-te-spinner-animation">
+      <svg class="goog-te-spinner" height="96px" viewbox="0 0 66 66" width="96px" xmlns="http://www.w3.org/2000/svg">
+      <circle class="goog-te-spinner-path" cx="33" cy="33" fill="none" r="30" stroke-linecap="round" stroke-width="6"></circle></svg>
+    </div>
+  </div>
+  <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div>
+</body>
+
+
