@@ -1,0 +1,112 @@
+<body class="site-service body-categories-areas__show" style="position: relative; min-height: 100%; top: 0px;">
+  <header>
+    <div class="dashboard-container">
+      <div data-react-class="SMMustHeaderView" >
+      <%= render partial: 'share/campaign' %>
+      </div>
+      <%= render partial: 'share/header' %>
+    </div>
+  </header>
+  <div class="breadcrumbs link__subcolor sm-hide">
+    <ol itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <li>
+        <%= link_to root_path, {itemprop: "url" } do%>
+        <i class="ic_home">ホーム</i>
+        <% end %>
+      </li>
+      <li><span class="breadcrumbs-title" itemprop="title">会場タイプから探す</span></li>
+    </ol>
+  </div>
+  <div class="site-main">
+    <div class="mod-heroimg">
+      <img alt="会場タイプから探す" class="mod-heroimg__img" src="./%E4%BC%9A%E5%A0%B4%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%81%8B%E3%82%89%E6%8E%A2%E3%81%99(space_type%E3%81%AEindex)_files/hero_space-3b2edfdf2a437cd003a84eb4e9eee57a.jpg">
+      <div class="mod-heroimg__bg">
+        <h1 class="mod-heroimg__title">会場タイプから探す</h1>
+      </div>
+    </div>
+    <div class="page__odd lp-page__padding">
+      <div class="page__col1">
+        <p class="lp-category__text">レンタルスペースの予約なら「スペースマーケット」。まずは会場タイプから検索してみましょう。ベーシックに使えるイベントスペースから球場やお寺までユニークなスペースも多数掲載！写真、設備、地図、アクセス、予約カレンダーで簡単に比較検討ができます。企業イベントや飲み会、結婚式など様々なレンタルスペース探しにご活用下さい！</p>
+      </div><!-- /.page__odd -->
+    </div>
+    <div class="page__even lp-page__padding">
+      <div class="page__col1">
+        <ul class="row lp-category__list">
+          <% @space_types.each do |space_type| %>
+          <li class="col-xs-6 col-md-3">
+            <a class="a__underline" href="/space_types/<%= space_type.space_sort_eng %>"><i class="fa fa-caret-right"></i><%= space_type.space_sort %></a>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+<footer id="js-site-footer">
+ <%= render partial: 'share/footer' %>
+</footer>
+
+<div id="js-baloon-container"></div>
+
+<iframe frameborder="0" id="stripeXDM_default192500_provider" name="stripeXDM_default192500_provider" src="./%E4%BC%9A%E5%A0%B4%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%81%8B%E3%82%89%E6%8E%A2%E3%81%99(space_type%E3%81%AEindex)_files/channel.html" style="position: absolute; top: -2000px; left: 0px;"></iframe>
+  <div id="cboxOverlay" style="display: none;"></div>
+  <div class="" id="colorbox" role="dialog" style="display: none;" tabindex="-1">
+    <div id="cboxWrapper">
+      <div>
+        <div id="cboxTopLeft" style="float: left;"></div>
+        <div id="cboxTopCenter" style="float: left;"></div>
+        <div id="cboxTopRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxMiddleLeft" style="float: left;"></div>
+        <div id="cboxContent" style="float: left;">
+          <div id="cboxTitle" style="float: left;"></div>
+          <div id="cboxCurrent" style="float: left;"></div><button id="cboxPrevious" type="button"></button><button id="cboxNext" type="button"></button><button id="cboxSlideshow" type="button"></button>
+          <div id="cboxLoadingOverlay" style="float: left;"></div>
+          <div id="cboxLoadingGraphic" style="float: left;"></div>
+        </div>
+        <div id="cboxMiddleRight" style="float: left;"></div>
+      </div>
+      <div style="clear: left;">
+        <div id="cboxBottomLeft" style="float: left;"></div>
+        <div id="cboxBottomCenter" style="float: left;"></div>
+        <div id="cboxBottomRight" style="float: left;"></div>
+      </div>
+    </div>
+    <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+  </div>
+  <div class="skiptranslate" dir="ltr" id="goog-gt-tt">
+    <div style="padding: 8px;">
+      <div>
+        <div class="logo"><img alt="Google 翻訳" height="20" src="./%E4%BC%9A%E5%A0%B4%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%81%8B%E3%82%89%E6%8E%A2%E3%81%99(space_type%E3%81%AEindex)_files/translate_24dp.png" width="20"></div>
+      </div>
+    </div>
+    <div class="top" style="padding: 8px; float: left; width: 100%;">
+      <h1 class="title gray">原文</h1>
+    </div>
+    <div class="middle" style="padding: 8px;">
+      <div class="original-text"></div>
+    </div>
+    <div class="bottom" style="padding: 8px;">
+      <div class="activity-links">
+        <span class="activity-link">翻訳を改善する</span><span class="activity-link"></span>
+      </div>
+      <div class="started-activity-container">
+        <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+        <div class="activity-root"></div>
+      </div>
+    </div>
+    <div class="status-message" style="display: none;"></div>
+  </div>
+  <div>
+    <div id="adpyt" style="position:fixed;width:100%;height:100%;background-color:#00006C;z-index: 99999999999999999999;display:none;top:0;left:0;opacity:0.99;">
+      <iframe src="./%E4%BC%9A%E5%A0%B4%E3%82%BF%E3%82%A4%E3%83%95%E3%82%9A%E3%81%8B%E3%82%89%E6%8E%A2%E3%81%99(space_type%E3%81%AEindex)_files/saved_resource.html" style="width:0;height:0;display:none;"></iframe>
+    </div>
+  </div>
+  <div class="goog-te-spinner-pos">
+    <div class="goog-te-spinner-animation">
+      <svg class="goog-te-spinner" height="96px" viewbox="0 0 66 66" width="96px" xmlns="http://www.w3.org/2000/svg">
+      <circle class="goog-te-spinner-path" cx="33" cy="33" fill="none" r="30" stroke-linecap="round" stroke-width="6"></circle></svg>
+    </div>
+  </div>
+  <div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; background: transparent; top: -100000px; left: -100000px;"></div>
+</body>
