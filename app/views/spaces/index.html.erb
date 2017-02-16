@@ -1,24 +1,11 @@
 <body class="site-service body-home__index" style="position: relative; min-height: 100%; top: 0px;">
 <header>
   <div class="dashboard-container">
-      <div data-react-class="SMMustHeaderView" data-react-props="{&quot;promotions&quot;:[{&quot;id&quot;:20,&quot;title&quot;:&quot;最近公開されたスペース限定！スペース利用料3,000円OFF！&quot;,&quot;description&quot;:&quot;掲載スペースどんどん増加中！\r\n今なら最近公開された対象のスペースの利用料が割引になるキャンペーン中！\r\nあのスペースの一番最初の利用者になってみませんか？&quot;,&quot;search_query&quot;:&quot;https://spacemarket.com/search?room_id=29492,28262,28952,29146,30229,28555,29757,29929,29024,30289,30207,29874,28327,30181,29102,29985,28280,28869,29296,28360&quot;,&quot;started_at&quot;:&quot;2017-01-18T09:00:00.000+09:00&quot;,&quot;ended_at&quot;:&quot;2017-03-31T09:00:00.000+09:00&quot;,&quot;background_color&quot;:&quot;#efb75f&quot;,&quot;coupon_tags&quot;:&quot;期間限定,3000円OFF,新着スペースに使える&quot;,&quot;text_color&quot;:&quot;#ffffff&quot;,&quot;link_color&quot;:&quot;#efb75f&quot;,&quot;created_at&quot;:&quot;2017-01-20T12:39:45.000+09:00&quot;,&quot;updated_at&quot;:&quot;2017-01-23T10:49:55.000+09:00&quot;,&quot;is_send_coupon_mail&quot;:false,&quot;coupon_mail_text&quot;:&quot;&quot;,&quot;coupon_type&quot;:0,&quot;external_coupon_code&quot;:&quot;&quot;,&quot;external_coupon_title&quot;:&quot;&quot;,&quot;external_coupon_agreement&quot;:&quot;&quot;,&quot;external_url_link&quot;:&quot;&quot;,&quot;image&quot;:&quot;https://d1nc9n01ephlj6.cloudfront.net/uploads/promotions/20/rect_large_e5a3d35775e0d06ea71916c916d98ce3.png&quot;,&quot;background_image&quot;:null,&quot;first_limited&quot;:false,&quot;coupon&quot;:{&quot;id&quot;:37,&quot;code&quot;:&quot;NEWSPACE201701&quot;,&quot;discount_type&quot;:2,&quot;description&quot;:&quot;最近公開されたスペース限定！スペース利用料3,000円OFF！&quot;,&quot;redemption_limit&quot;:10000,&quot;amount&quot;:&quot;3000.0&quot;,&quot;redemptions_count&quot;:1,&quot;percentage&quot;:null,&quot;min_order_amount&quot;:&quot;10000.0&quot;,&quot;redemption_limit_per_user&quot;:10000,&quot;coupon_type&quot;:0,&quot;created_at&quot;:&quot;2017-01-18T12:43:43.000Z&quot;,&quot;updated_at&quot;:&quot;2017-01-20T09:57:11.000Z&quot;,&quot;valid_at&quot;:&quot;2017-01-18T00:00:00.000Z&quot;,&quot;expires_at&quot;:&quot;2017-03-31T00:00:00.000Z&quot;}}]}">
-        <a class="site-header__campaign" data-react-checksum="1275878590" data-reactid="1" data-reactroot="" href="https://spacemarket.com/promotions/20" style="color:#ffffff;background-color:#efb75f;background-image:none;background-repeat:repeat;">
-        <div class="site-header__campaign-date-box" data-reactid="2">
-          <div class="site-header__campaign-date-box-inner" data-reactid="3">
-            <p class="site-header__campaign-date" data-reactid="4"><!-- react-text: 5 -->2017年<!-- /react-text --><br data-reactid="6">
-            <!-- react-text: 7 -->3月31日<!-- /react-text --><br data-reactid="8">
-            <!-- react-text: 9 -->まで<!-- /react-text --></p>
-          </div>
-        </div>
-        <p class="site-header__campaign-title" data-reactid="10">最近公開されたスペース限定！スペース利用料3,000円OFF！</p>
-        <div class="site-header__campaign-button-box" data-reactid="11">
-          <div class="button-white site-header__campaign-button" data-reactid="12" style="color:#efb75f;">
-            キャンペーン詳細へ
-          </div>
-        </div></a>
+      <div data-react-class="SMMustHeaderView" >
+        <%= render partial: 'share/campaign' %>
       </div>
-      <%=render partial: "share/header" %>
-    </div>
+    <%= render partial: "share/header" %>
+  </div>
 </header>
   <div class="site-main" data-reactroot="" data-reactid="1" data-react-checksum="-688888343">
     <div id="slider" class="flexslider" data-reactid="2">

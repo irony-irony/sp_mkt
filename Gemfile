@@ -49,12 +49,21 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :production do
+  gem 'pg', '0.18.4'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
 gem 'pry-rails'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-sass'
 gem "font-awesome-rails"
 gem 'devise'
-
-
+gem 'omniauth'
+gem "omniauth-facebook"
+gem "dotenv-rails"
+gem 'jp_prefecture'
+gem 'rails-i18n'

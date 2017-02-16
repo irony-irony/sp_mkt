@@ -10,6 +10,10 @@ class ApplicationController < ActionController::Base
     'spaces_path'
   end
 
+  def after_sign_in_path_for(resource) #サインインした後のリダイレクト先の指定
+    'spaces_path'
+  end
+
   def after_sign_up_path_for(resource) #サインアップした後のリダイレクト先の指定
     'new_user_confirmation_path'
   end

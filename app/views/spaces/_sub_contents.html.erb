@@ -43,7 +43,7 @@
             <p class="top-bonus__points-inner" data-reactid="98">今なら3,000円OFFクーポンプレゼント！</p>
           </div>
           <h2 class="top-flow__regist-title" data-reactid="99">今すぐ会員登録して、スペースを貸し借りしてみよう</h2>
-          <a href="/i/sign_up" class="button-blue top-more__area-button top-flow__regist-button" data-reactid="100">新規登録（無料）</a>
+          <%=link_to "新規登録（無料）", new_user_registration_path, class: "button-blue top-more__area-button top-flow__regist-button" %>
           <p class="top-bonus__text" data-reactid="101"><!-- react-text: 102 -->新規ご利用のゲスト限定で、すべてのスペースで利用できる3,000円OFFクーポン(10,000円以上の予約リクエストで利用可能)をプレゼントしています。<!-- /react-text --><a href="https://spacemarket.com/promotions/14" data-reactid="103">詳細はこちら。</a></p>
         </div>
       </div>
@@ -54,38 +54,38 @@
         <div class="row top-category" data-reactid="107">
           <div class="col-sm-12 col-md-4" data-reactid="108">
             <div class="top-category__image" data-reactid="109">
-              <a href="/areas" data-reactid="110">
+              <%= link_to prefectures_path do %>
                 <img src="//d1p70l9icfjben.cloudfront.net/assets/service/landing/category/hero_areas-bfcf3e3c849ae3020a1b62128ab328ab.jpg" alt="エリアから探す" class="top-category__image-pict" data-reactid="111"/>
                 <div class="top-category__image-bg" data-reactid="112">
                   <h3 class="top-category__title" data-reactid="113"><!-- react-text: 114 -->エリア<!-- /react-text -->
                     <span class="top-category__title-sub" data-reactid="115">から探す</span>
                   </h3>
                 </div>
-              </a>
+              <% end %>
             </div>
           </div>
           <div class="col-sm-12 col-md-4" data-reactid="116">
             <div class="top-category__image" data-reactid="117">
-              <a href="/space_types" data-reactid="118">
+              <%= link_to space_types_path do %>
                 <img src="//d1p70l9icfjben.cloudfront.net/assets/service/landing/category/hero_space-e24a56a6db18de0eb907ca41fa6df0de.jpg" alt="会場タイプから探す" class="top-category__image-pict" data-reactid="119"/>
                 <div class="top-category__image-bg" data-reactid="120">
                   <h3 class="top-category__title" data-reactid="121"><!-- react-text: 122 -->会場タイプ<!-- /react-text -->
                     <span class="top-category__title-sub" data-reactid="123">から探す</span>
                   </h3>
                 </div>
-              </a>
+              <% end %>
             </div>
           </div>
           <div class="col-sm-12 col-md-4" data-reactid="124">
             <div class="top-category__image" data-reactid="125">
-              <a href="/amenities" data-reactid="126">
+              <%= link_to amenities_path do %>
                 <img src="//d1p70l9icfjben.cloudfront.net/assets/service/landing/category/hero_amenity-2488fb721e223c3493882cbd290d1ab8.jpg" alt="アメニティから探す" class="top-category__image-pict" data-reactid="127"/>
                 <div class="top-category__image-bg" data-reactid="128">
                   <h3 class="top-category__title" data-reactid="129"><!-- react-text: 130 -->アメニティ<!-- /react-text -->
                     <span class="top-category__title-sub" data-reactid="131">から探す</span>
                   </h3>
                 </div>
-              </a>
+              <% end %>
             </div>
           </div>
         </div>
