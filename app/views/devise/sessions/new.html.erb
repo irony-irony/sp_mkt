@@ -1,0 +1,92 @@
+<body class="site-service body-users-sessions__new" style="position: relative; min-height: 100%; top: 0px;">
+  <header>
+    <div class="dashboard-container">
+      <div data-react-class="SMMustHeaderView" data-react-props="{&quot;promotions&quot;:null}"><!-- react-empty: 1 --></div>
+      <%= render partial: 'share/header'%>
+    </div>
+  </header>
+
+  <div class="breadcrumbs link__subcolor sm-hide">
+    <ol itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+      <li>
+       <%= link_to root_path, {itemprop: "url" } do %>
+          <i class="ic_home">ホーム</i>
+        <% end %>
+      </li>
+      <li><span class="breadcrumbs-title" itemprop="title">ログイン</span></li>
+    </ol>
+  </div>
+  <section class="page_signin" id="contents">
+    <section id="main_contents">
+      <div data-react-class="SMLoginFormView" data-react-props="{&quot;resource&quot;:{&quot;id&quot;:null,&quot;email&quot;:&quot;&quot;,&quot;auth_uid&quot;:null,&quot;name&quot;:null,&quot;provider&quot;:null,&quot;username&quot;:null,&quot;owner_sign_in_at&quot;:null,&quot;default_owner_id&quot;:0,&quot;card_customer_id&quot;:null,&quot;profile_image&quot;:{&quot;url&quot;:null,&quot;thumb&quot;:{&quot;url&quot;:null},&quot;small&quot;:{&quot;url&quot;:null}},&quot;cancel_count&quot;:0,&quot;refresh_token&quot;:null,&quot;notified_at&quot;:null,&quot;deleted_at&quot;:null,&quot;created_at&quot;:null,&quot;updated_at&quot;:null,&quot;time_zone&quot;:&quot;Asia/Tokyo&quot;,&quot;reputation_count&quot;:0.0,&quot;reputation_score&quot;:0.0,&quot;registration_type&quot;:0,&quot;profile&quot;:null,&quot;certificate&quot;:null,&quot;is_certificated&quot;:false,&quot;certificate_status&quot;:0,&quot;notification_checked_at&quot;:null},&quot;resource_name&quot;:&quot;user&quot;,&quot;authenticity_token&quot;:&quot;VsdCikx3awkrZij1Kl6CbvMgVuPyW137dq1BqZTfWgikchI+n2cSjPT0GxHm1ob0mEphysR/6jE+jdIHm4U++g==&quot;}">
+        <div class="site-main" data-reactroot="">
+          <div class="page__even lp-page__padding">
+            <div class="page__col1">
+              <div class="signup-head">
+                <h1 class="page-title">ログイン</h1>
+              </div>
+              <div class="signup-box signup-box__line">
+                <div class="row col-signup__pd">
+                  <div class="col-sm-12 col-md-6">
+                    <h2 class="signup-box__title">外部サービスでログイン</h2>
+                    <ul class="signup-box__sns">
+                      <li>
+                        <a class="button-facebook pt15 pb15 w100pa" href="https://spacemarket.com/i/auth/facebook"><span class="signup-box__sns-button">Facebookでログイン</span></a>
+                      </li>
+                    </ul>
+                    <p class="signup-box__notes"><!-- react-text: 15 -->ログイン以外の目的に使われることはありません。<!-- /react-text --><br class="sm-hide">
+                    <!-- react-text: 17 -->スペースマーケットがゲストの同意なしに投稿することはありません。<!-- /react-text --></p>
+                  </div>
+                  <div class="col-sm-12 col-md-6 sm-signup-box__line">
+                    <%= form_for(resource, as: resource_name, url: new_user_session_path(resource_name)) do |f| %>
+                      <h2 class="signup-box__title">メールアドレスでログイン</h2>
+                      <div class="signup-box__md-top">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label w100pa is-upgraded" data-upgraded=",MaterialTextfield">
+                          <%= f.label "メールアドレス", class: "mdl-textfield__label" %>
+                          <%= f.email_field :email, {class: "mdl-textfield__input", id: "mail"}%>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label w100pa is-upgraded" data-upgraded=",MaterialTextfield">
+                          <%= f.label "パスワード", class: "mdl-textfield__label" %>
+                          <%= f.password_field :password, {class: "mdl-textfield__input", id: "password"} %>
+                        </div>
+                      </div>
+                      <div class="signup-box__login-checkbox">
+                        <label class="mdl-checkbox mdl-js-checkbox mdl-checkbox__input is-upgraded" data-upgraded=",MaterialCheckbox">
+                          <input class="mdl-checkbox__input" id="checkbox-1" name="user[remember_me]" type="checkbox" value="on">
+                          <span class="mdl-checkbox__label">ログインしたままにする。</span>
+                          <span class="mdl-checkbox__focus-helper"></span>
+                          <span class="mdl-checkbox__box-outline">
+                            <span class="mdl-checkbox__tick-outline"></span>
+                          </span>
+                        </label>
+                      </div>
+                      <p class="signup-box__login-btn">
+                        <%= f.submit "ログイン", class: "button-blue pt15 pb15 w100pa" %>
+                      </p>
+                    <% end %>
+                    <div class="ta-c">
+                      <p>
+                      <%= link_to "パスワードを忘れた方はこちら", new_user_password_path, class: "a__underline" %>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="signup-box">
+                <div class="row">
+                  <div class="col-xs-12 ta-c">
+                    <h2 class="signup-box__title signup-box__title-other"><!-- react-text: 43 -->アカウントをお持ちでない方はこちら<!-- /react-text --></h2>
+                    <%= link_to "新規登録", new_user_registration_path, class: "button-blue pt15 pb15 w200 sm-w100" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+<footer id="js-site-footer">
+  <%= render partial: 'share/footer'%>
+</footer>
+</body>
