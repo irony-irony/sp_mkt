@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170210115227) do
+ActiveRecord::Schema.define(version: 20170217062648) do
 
   create_table "amenities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "facility"
@@ -23,6 +23,10 @@ ActiveRecord::Schema.define(version: 20170210115227) do
     t.string  "city",          default: ""
     t.string  "street",        default: ""
     t.index ["prefecture_id"], name: "index_areas_on_prefecture_id", using: :btree
+  end
+
+  create_table "capacities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "capa"
   end
 
   create_table "event_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -43,8 +47,10 @@ ActiveRecord::Schema.define(version: 20170210115227) do
   end
 
   create_table "room_event_types", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "room_id",        null: false
+    t.integer "event_types_id", null: false
+    t.index ["event_types_id"], name: "index_room_event_types_on_event_types_id", using: :btree
+    t.index ["room_id"], name: "index_room_event_types_on_room_id", using: :btree
   end
 
   create_table "rooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -113,5 +119,7 @@ ActiveRecord::Schema.define(version: 20170210115227) do
 
   add_foreign_key "room_amenities", "amenities"
   add_foreign_key "room_amenities", "rooms"
+  add_foreign_key "room_event_types", "event_types", column: "event_types_id"
+  add_foreign_key "room_event_types", "rooms"
   add_foreign_key "spaces", "areas"
 end
